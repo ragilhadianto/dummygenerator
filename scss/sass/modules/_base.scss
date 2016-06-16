@@ -1,0 +1,123 @@
+$bg_base: #f0ffff;
+$bg_none: none !important;
+$bg_1: #e85224;
+
+$font_body: 'open sans', sans-serif;
+$font_1: 'Oswald', sans-serif;
+$font_2: 'Nathan', sans-serif;
+$font_icon: 'icomoon';
+
+$cl_primary: #5f5f5f;
+$cl_white: #fff;
+$cl_red: red;
+$cl_1: #bcbcbc;
+$cl_2: #e85224;
+
+//  warna sosial media
+$cl_fb: #3b5998;
+$cl_tw: #4099FF;
+$cl_gp: #d34836;
+$cl_wa: #43d854;
+
+$grid_desktop: 640px;
+$grid_desktop_large: 1100px;
+$grid_mobile: 100%;
+
+
+//grid bootstrap
+$lg:1100px;
+$md:992px;
+$sm:768px;
+$xs:360px;
+$xxs:320px;
+
+$size_small: 12.32px;
+
+// break tablet
+$mntablet: 768px; 
+$mdtablet: 990px; 
+$mxtablet: 1024px;
+
+// default transisi
+@mixin base_transition($t) {
+	-webkit-transition: $t .2s ease;
+	-moz-transition: $t .2s ease;
+	-ms-transition: $t .2s ease;
+	-o-transition: $t .2s ease;
+	transition: $t .2s ease;
+}
+// border radius
+@mixin border_radius($x) {
+	-webkit-border-radius: $x;
+	-moz-border-radius: $x;
+	-ms-border-radius: $x;
+	-o-border-radius: $x;
+	border-radius: $x;
+}
+// skala
+@mixin base_scale($x) {
+    -ms-transform: scale($x); /* IE 9 */
+    -webkit-transform: scale($x); /* Safari */
+    transform: scale($x);
+}
+// reset style ul
+@mixin reset_ul {
+	margin: 0;
+	padding: 0;
+}
+// 100%
+@mixin display_full {
+	width: 100%;
+	height: 100%;
+}
+@mixin center-absolute{
+	left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+}
+// untuk overflow judul pada list berita
+@mixin title_overflow($height, $max-height) {
+	height: $height;
+	max-height: $max-height;
+	overflow: hidden;
+	font-family: $font_icon;
+}
+// height 100%
+@mixin height-100{
+	height: 100%;
+	width: auto;
+	max-width: none;
+}
+//width 100%
+@mixin width-100{
+	width: 100%;
+	height: auto;
+}
+// media
+@mixin max-responsive ($media) {
+  @media (max-width: $media) { @content; }
+}
+@mixin min-responsive ($media) {
+  @media (min-width: $media) { @content; }
+}
+@mixin range-responsive ($media, $media2) {
+  @media (min-width: $media) and (max-width: $media2) { @content; }
+}
+
+@mixin bg_black_gradient{background: rgba(0,0,0,0);
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 37%, rgba(0,0,0,0.66) 47%, rgba(0,0,0,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(37%, rgba(0,0,0,0.6)), color-stop(47%, rgba(0,0,0,0.66)), color-stop(100%, rgba(0,0,0,1)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 37%, rgba(0,0,0,0.66) 47%, rgba(0,0,0,1) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 37%, rgba(0,0,0,0.66) 47%, rgba(0,0,0,1) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 37%, rgba(0,0,0,0.66) 47%, rgba(0,0,0,1) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 37%, rgba(0,0,0,0.66) 47%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+
+}
+
+@mixin btn-hover{
+	background: #4a788a;
+	color: #fff !important;
+	border: none;
+}

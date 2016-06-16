@@ -1,0 +1,225 @@
+//wrapper
+.wrapper {
+	min-height:100%;
+	//position:relative;
+}
+
+//main
+.main{
+ 	
+ 	padding:10px;
+ 	padding-bottom: 72px;
+}
+
+.tabs-menu li.current {
+    z-index: 5;
+}
+.tab-content {
+    display: none;
+}
+#tab-1, .generate_page {
+ display: block;   
+}
+
+//categori-ad
+.categori-ad{
+	& h3{
+			font-family: $font_1;
+			border-bottom: 1px solid #5f5f5f;
+		    margin: 10px 0;
+		    padding: 5px 0;
+	     	font-size: 16px;
+    		font-weight: normal;
+		}
+	& ul li{
+		width: 100%;
+		background: #f7f7f7;
+		border: 1px solid #efefef;
+		padding: 8px;
+		margin-bottom: 10px;
+		height: 60px;
+		position: relative;
+		overflow: hidden;
+		@include base_transition(all);
+
+		&:hover .position_no{
+	 		top: 0;
+		}
+
+		& .position_no{
+			position: absolute;
+			top: 60px;
+			height: 60px;
+			width:100%;
+			left: 0;
+		 	height: 60px;
+		 	width: 100%;
+		 	background: rgba(0,0,0,0.8);
+		 	color: #fff;
+		 	@include base_transition(all);	 	
+
+		 	& .name-ad{
+		 		float: left;
+    			padding: 16px 11px;
+    			@include base_transition(all);
+
+    			&:hover{
+    				color: $cl_2;
+    			}
+		 	}
+		}
+
+		& input[type=radio]{
+			display: none;
+		}
+		&:hover{
+			cursor: pointer;
+			background: #e6e6e6;
+		}
+		& .name-ad{
+			text-transform: uppercase;
+			font-family: $font_1;
+			font-size: 21px;
+		}
+		& small{
+			display: block;
+		}
+	}
+	&.floating{
+		color: #90d300 !important;
+		& h3{
+			border-bottom: 1px solid #90d300;
+		}
+	}
+	&.sticky{
+		color: #ffae00 !important;
+		& h3{
+			border-bottom: 1px solid #ffae00;
+		}
+	}
+	&.expandable{
+		color: #00acec !important;
+		& h3{
+			border-bottom: 1px solid #00acec;
+		}
+	}
+
+}
+
+
+//pilih-kanal
+.pilih-kanal{
+	& select{
+	 	background: #f7f7f7 none repeat scroll 0 0;
+	    border: 1px solid #e6e6e6;
+	    height: 55px;
+	    padding: 0 10px;
+	    width: 100%;
+	    font-family: $font_1;
+	    text-transform: uppercase;
+	}
+}
+
+//sub title
+.pilih_file, 
+.upload_img, 
+.upload_html, 
+.link_landing, 
+.id_youtube, 
+.generate,
+.box_field{
+	& h3{
+		font-family: $font_1;
+		font-size: 16px;
+		font-weight: normal;
+		text-transform: uppercase;
+		margin: 10px 0;
+		padding: 5px 0;
+	}
+}
+
+//upload
+.upload{
+	& > div{
+		margin-bottom: 20px;
+	}
+
+	& .show_file{
+
+		& li{
+			display: block;
+		}
+
+		& .item-show{
+			display: none;
+			&.current{
+
+			}
+		}
+	}
+
+	& .pilih_file{
+		& ul li{
+			width: 150px;
+			cursor: pointer;
+
+			& .item-file{
+				border: 1px solid #bcbcbc;
+			    border-radius: 50%;
+			    height: 20px;
+			    width: 20px;
+			    padding: 3px;
+			    cursor: pointer;
+			    float: left;
+			    margin-right: 5px;
+			    &.current{
+			    	 	& span{
+				    	width: 12px;
+				    	height: 12px;
+				    	background: #e85224;
+				    	display: block;
+				    	border-radius: 50%;
+				    }
+			    }			    
+			}
+			& h4{
+		    	overflow: hidden;
+		    	position: relative;
+		    	top: 1px;
+		    }
+		}
+	}
+	& .upload_html, .link_landing, .id_youtube, .box_field{
+
+		& ._field {
+			padding-right: 20px;
+			& input[type=text], textarea{
+				border: 1px solid #e85224;
+			    min-height: 30px;
+			    width: 100%;
+		     	padding: 0 5px;
+    			width: 100%;
+			}
+		}
+	}
+}
+
+//generate
+.generate{
+	text-align: center;
+	& .inner-genrate{
+		margin-bottom: 50px;
+		& h5{
+			color: #0a5589;
+		}
+		& a{
+			&:hover{
+				color: $cl_2;
+			}
+		}
+		& ._btn{
+			width: 150px;
+			margin: 20px auto;
+		}
+	}
+}

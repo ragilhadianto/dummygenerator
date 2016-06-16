@@ -1,0 +1,137 @@
+/*header*/
+header{
+	height: 72px;
+	background: #f7f7f7;
+	& .logo{
+		padding-top: 20px;
+	}
+
+	& .new_dums{
+		padding-top: 20px;
+
+		& img{
+			float: left;
+		}
+
+		& .text_new_dums{
+		 	color: #05568c;
+		    line-height: 14px;
+		    overflow: hidden;
+		    padding-left: 5px;
+		    position: relative;
+		    text-transform: uppercase;
+		    top: -2px;
+
+			& small{
+				display: block;
+			 	font-size: 14px;
+				font-weight: bold;
+			}
+
+			& span{
+				display: block;
+			}
+		}
+	}
+
+	& .device_section{
+
+		& ul{
+			float: right;
+			margin-top: 12px;
+
+			& li{
+				position: relative;
+
+				& a{
+					padding: 10px;
+
+					&.active{
+						& span{
+							font-weight: bold;
+						}
+					}
+				}
+				
+			}
+		}
+	}
+}
+
+
+nav{
+	margin: 20px 0;
+		& .inner-menu{
+	}
+	& ul li{
+ 		display: block;
+	    float: left;
+	    height: 54px;
+	    width: 33%;
+	    position: relative;
+
+	    & .disable{
+	    	display: none;
+	    	&:hover{
+
+	    	}
+	    }
+
+	    &.current{
+	    	& .box{
+	    		background: #cf481f;
+	    		color: #fff;
+	    	}
+	    	& .item_menu{
+	    		background: #e85224;
+	    		color: #fff;
+	    	}
+	    	 & .triangle{
+		    	position: absolute;
+		    	border-bottom: 27px solid transparent;
+			    border-left: 10px solid #e85224;
+			    border-top: 27px solid transparent;
+			    height: 0;
+			    right: -9.5px;
+			    top: 0;
+			    width: 0;
+			    z-index: 999;
+		    }
+	    }
+
+	    & a{
+		 	display: block;
+		    height: 54px;
+		    overflow: hidden;
+		    position: absolute;
+		    top: 0;
+		    width: 100%;
+		}
+		& .box{
+			background: #e6e6e6;
+			color: $cl_1;
+			font-family: $font_1;
+			font-size: 30px;
+		    font-weight: bold;
+		    height: 54px;
+		    padding-top: 7px;
+		    text-align: center;
+		    width: 54px;
+		    position: relative;
+		}
+		& .item_menu{
+			float: left;
+    		width: 204px;
+		    padding: 18px;
+		    text-align: center;
+		    background: #f7f7f7;
+		    position: relative;
+		    color: $cl_1;
+		}
+		& .box, .item_menu{
+			cursor: no-drop;
+		}
+
+	}
+	
+}
